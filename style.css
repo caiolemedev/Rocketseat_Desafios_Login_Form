@@ -3,6 +3,8 @@
 :root {
   --text-base: #afb6c2;
   --text-title: #d4ccb6;
+  --text-button: #473404;
+  --text-input: #a9afb9;
   --background: #191816;
   --form-background: #24221f;
   --primary-color: #ffc632;
@@ -15,6 +17,8 @@
   margin: 0;
   padding: 0;
   color: var(--text-base);
+  font-family: 'Poppins';
+  box-sizing: border-box;
 }
 
 body {
@@ -26,12 +30,88 @@ body {
   width: calc(100% - 420px);
 }
 
+.logo {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
 .card {
-  margin: 194px 74px 194px 74px;
+  height: calc(100vh / 1.5);
+  margin: 100px 74px 70px 74px;
 
   background-color: var(--form-background);
-
   border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card header {
+  margin-top: 55px;
+}
+
+.card header h1 {
+  color: var(--text-title);
+  font-weight: 600;
+  display: inline;
+}
+
+.card header p {
+  font-family: 'Roboto';
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+.card .email {
+  padding-top: 27px;
+}
+
+.card .password {
+  padding-top: 20px;
+}
+
+.card .email p,
+.card .password p {
+  font-weight: 500;
+}
+
+.card .email input,
+.card .password input {
+  width: 335px;
+  height: 44px;
+  background-color: transparent;
+  border-radius: 4px;
+  appearance: none;
+  border: 1px solid #868686;
+  padding-left: 40px;
+}
+
+.card .email input {
+  background-image: url(./images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.card .password input {
+  background-image: url(./images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.card .email input:focus,
+.card .password input:focus {
+  appearance: none;
+  border: none;
+  outline: 3px solid #ffc632;
+}
+
+.card .email input:focus {
+  background-image: url(./images/mail-focus.svg);
+}
+
+.card .password input:focus {
+  background-image: url(./images/lock-focus.svg);
 }
 
 .sideImage {
