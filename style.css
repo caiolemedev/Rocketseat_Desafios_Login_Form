@@ -24,20 +24,22 @@
 body {
   display: flex;
   background-color: var(--background);
+  justify-content: space-between;
 }
 
 .container {
-  width: calc(100% - 420px);
+  max-width: 50%;
 }
 
 .logo {
-  padding-left: 40px;
-  padding-top: 40px;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .card {
-  margin: 30px 74px 70px 74px;
-  min-width: 400px;
+  margin-top: 30px;
+  margin-left: 74px;
+  width: 500px;
 
   background-color: var(--form-background);
   border-radius: 4px;
@@ -45,7 +47,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 .card header {
@@ -195,7 +196,27 @@ body {
 }
 
 .sideImage {
-  min-width: 420px;
-  max-width: 50%;
   height: 100vh;
+}
+
+@media (max-width: 1100px) {
+  .sideImage {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    background-color: var(--background);
+    width: 100%;
+    padding-left: 50px;
+    margin-top: 20px;
+  }
+
+  .card header {
+    margin-top: 20px;
+  }
 }
